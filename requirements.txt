@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+streamlit
+requests
+plotly
+sqlalchemy
+pandas
+numpy
+PyMuPDF
+tqdm
+seaborn
+matplotlib
+scikit-learn
+xgboost
+joblib
