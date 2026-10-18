@@ -3,6 +3,7 @@ import requests
 import pandas as pd
 from sqlalchemy import create_engine
 import plotly.express as px
+import os
 
 # -----------------------------
 # PAGE CONFIG
