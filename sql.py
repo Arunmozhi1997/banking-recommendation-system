@@ -15,13 +15,15 @@ engine = create_engine(os.getenv("DATABASE_URL"))
 # -----------------------------
 # LOAD CSV (FULL PATH)
 # -----------------------------
-customers_df = pd.read_csv(r"C:\Users\HP\axis_ml\venv\Scripts\customers.csv")
-accounts_df = pd.read_csv(r"C:\Users\HP\axis_ml\venv\Scripts\accounts.csv")
-transactions_df = pd.read_csv(r"C:\Users\HP\axis_ml\venv\Scripts\transactions.csv")
-features_df = pd.read_csv(r"C:\Users\HP\axis_ml\venv\Scripts\features.csv")
-product_catalog = pd.read_csv(r"C:\Users\HP\axis_ml\venv\Scripts\product_catalog.csv")
-recommendations_df = pd.read_csv(r"C:\Users\HP\axis_ml\venv\Scripts\recommendations.csv")
-model_metadata_df = pd.read_csv(r"C:\Users\HP\axis_ml\venv\Scripts\model_metadata.csv")
+DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
+
+customers_df = pd.read_csv(os.path.join(DATA_DIR, "customers.csv"))
+accounts_df = pd.read_csv(os.path.join(DATA_DIR, "accounts.csv"))
+transactions_df = pd.read_csv(os.path.join(DATA_DIR, "transactions.csv"))
+features_df = pd.read_csv(os.path.join(DATA_DIR, "features.csv"))
+product_catalog = pd.read_csv(os.path.join(DATA_DIR, "product_catalog.csv"))
+recommendations_df = pd.read_csv(os.path.join(DATA_DIR, "recommendations.csv"))
+model_metadata_df = pd.read_csv(os.path.join(DATA_DIR, "model_metadata.csv"))
 
 print("✅ All CSV loaded successfully")
 
