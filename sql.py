@@ -10,9 +10,7 @@ print("Current Path:", os.getcwd())
 # -----------------------------
 # DB CONNECTION
 # -----------------------------
-engine = create_engine(
-    "postgresql+psycopg2://postgres:Kovilvenni@localhost:5432/banking_db"
-)
+engine = create_engine(os.getenv("DATABASE_URL"))
 
 # -----------------------------
 # LOAD CSV (FULL PATH)
